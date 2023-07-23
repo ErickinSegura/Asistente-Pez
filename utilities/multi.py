@@ -1,13 +1,22 @@
 from modules.talk import Talker
+
+from youtubesearchpython import VideosSearch
 import pywhatkit
+
 
 talker = Talker()
 
 def play(res):
-    music = res.replace('REPRODUCE', '')
-    print("Reproduciendo" + music.lower())
-    talker.talk("Reproduciendo " + music)
-    pywhatkit.playonyt(music)
+    music = res.replace('reproduce', '')
+    music = res.replace('pon', '')
+    videosSearch = ((VideosSearch(music+" audio", limit = 1)).result())['result'][0]['title']
+    print("Reproduciendo " + videosSearch + "en YouTube")
+    talker.talk("Reproduciendo " + videosSearch+ " en YouTube")
+    pywhatkit.playonyt(videosSearch+" audio")
 
 def search_on_google(res):
     pywhatkit.search((res.replace('BUSCA', '')).lower())
+
+def feliz(res):
+    talker.talk("Al toque mi rey")
+    pywhatkit.playonyt("Fish dance Beach Parade but is Chiptune")

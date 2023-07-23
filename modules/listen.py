@@ -11,8 +11,8 @@ class Listener:
             print("Reconociendo...")
             try:
                 audio_text = r.recognize_google(audio, language='es-ES')
-                print("Texto: {}".format(audio_text))
-                return audio_text.upper()
+                #print("Texto: {}".format(audio_text))
+                return audio_text.lower()
             except:
                 print("Lo siento, no te entiendo")
 

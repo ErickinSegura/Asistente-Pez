@@ -1,9 +1,6 @@
 from modules.listen import Listener
 from modules.keywords import keywords
 
-
-
-
 def main():
     listener = Listener()
 

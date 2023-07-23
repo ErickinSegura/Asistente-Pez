@@ -1,10 +1,19 @@
-from utilities.multi import play
+from utilities.multi import play, search_on_google,feliz
 
 
 keywords = {
     #REPRODUCIR MUSICA
-    "REPRODUCE":play,
-    "PON":play,
+    "reproduce":play,
+    "pon":play,
+
+    #UTILIDADES
+    "busca":search_on_google,
+
+    #EASTER EGGS
+    "feliz":feliz,
+
+
+    
 
 
 }

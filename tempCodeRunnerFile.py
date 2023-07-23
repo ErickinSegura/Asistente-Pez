@@ -1,0 +1,1 @@
+command = list(filter(lambda x: x in user_prompt, keywords))
