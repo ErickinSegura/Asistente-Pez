@@ -1,4 +1,4 @@
-from utilities.multi import play, search_on_google,feliz
+from utilities.multi import play, search_on_google, feliz, cumbia, test
 
 
 keywords = {
@@ -8,12 +8,10 @@ keywords = {
 
     #UTILIDADES
     "busca":search_on_google,
+    "test":test,
 
     #EASTER EGGS
-    "feliz":feliz,
-
-
-    
-
+    "quiero ser feliz":feliz,
+    "modo cumbia":cumbia,
 
 }

@@ -1,5 +1,6 @@
 from modules.listen import Listener
 from modules.keywords import keywords
+from utilities.chat import chat
 
 def main():
     listener = Listener()
@@ -9,6 +10,8 @@ def main():
         command = list(filter(lambda x: x in user_prompt, keywords))
         if command:
             keywords[command[0]](user_prompt)
+        else:
+            chat(user_prompt)
         
     except Exception as e:
         print(f"Lo siento, no entendi {e}")
