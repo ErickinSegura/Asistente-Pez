@@ -2,9 +2,12 @@ from modules.talk import Talker
 
 from youtubesearchpython import VideosSearch
 import pywhatkit
+from datetime import datetime
 
 
 talker = Talker()
+
+#Utilidades
 
 def play(res):
     music = res.replace('reproduce', '')
@@ -16,6 +19,18 @@ def play(res):
 
 def search_on_google(res):
     pywhatkit.search((res.replace('BUSCA', '')).lower())
+
+def hora(res):
+    hora = datetime.datetime.now().strftime("%H:%M")
+    print("Son las " + hora)
+    talker.talk("Son las " + hora)
+
+def fecha(res):
+    fecha = datetime.today().strftime("%d/%m/%Y")
+    print("Hoy es " + fecha)
+    talker.talk("Hoy es " + fecha)
+
+#Easter Eggs
 
 def feliz(res):
     talker.talk("Al toque mi rey")
